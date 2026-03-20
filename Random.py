@@ -5,16 +5,16 @@ from tkinter import messagebox
 from PIL import Image, ImageTk
 
 messages = [
-    "1"
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10"
+    "You are doing great!",
+    "It's a beautiful day!",
+    "Keep up the good work!",
+    "You're awesome!",
+    "Don't give up!",
+    "You've got this!",
+    "Stay positive!"
+    "You are capable!",
+    "You are strong!",
+    "You are enough!"
 ]
 
 images = [
@@ -46,7 +46,7 @@ def show_me(msg):
     label_img = tk.Label(root, image=photo)
     label_img.pack()
 
-    label_text = tk.Label(root, text=msg, font=("Arial", 14))
+    label_text = tk.Label(root, text=msg, font=("Times New Roman", 16))
     label_text.pack()
 
     button = tk.Button(root, text="Close", command=root.destroy)
@@ -58,7 +58,8 @@ def show_me(msg):
     root.mainloop()
 
 while True:
-    wait_time = random.randint(600, 3600)  # 10–60 minutes
+    wait_time = random.randint(10, 30)
+    # wait_time = random.randint(900, 1800) # Random wait time between 15 and 30 minutes (900 to 1800 seconds)
     time.sleep(wait_time)
-    show_me()
+    show_me(msg=random.choice(messages))
 
