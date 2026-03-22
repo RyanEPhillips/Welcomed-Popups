@@ -30,9 +30,15 @@ images = [
 
 def show_message(msg):
     root = tk.Tk()
-    root.withdraw()
-    messagebox.showinfo("Reminder", msg)
-    root.destroy()
+    root.title("Reminder")
+
+    label = tk.Label(root, text=msg, font=("Times New Roman", 16), padx=20, pady=20)
+    label.pack()
+
+    # Auto close after 5 seconds
+    root.after(5000, root.destroy)
+
+    root.mainloop()
 
 
 def show_image(img_path):
