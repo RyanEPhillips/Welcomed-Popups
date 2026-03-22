@@ -37,7 +37,9 @@ def show_message(msg):
 
     # Auto close after 5 seconds
     root.after(5000, root.destroy)
-
+    root.geometry("300x150+800+400")
+    root.attributes("-topmost", True)
+    root.overrideredirect(True)
     root.mainloop()
 
 
@@ -55,7 +57,9 @@ def show_image(img_path):
 
     # auto close after 5 seconds
     root.after(5000, root.destroy)
-
+    root.geometry("300x300+800+400")
+    root.attributes("-topmost", True)
+    root.overrideredirect(True)
     root.mainloop()
 
 
